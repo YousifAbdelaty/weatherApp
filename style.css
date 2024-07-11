@@ -1,0 +1,769 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --cohly-fat7: #1e213a;
+  --cohly-ghameq: #100e1d;
+  --cohly-ghameq-awi: #110e3c;
+  --gray-fat7-awi: #e7e7eb;
+  --gray-fat7: #a09fb1;
+  --gray-ghameq: #88869d;
+  --yellow-bar: #ffec65;
+  --gray: #6e707a;
+  --width-bar: 34%;
+}
+
+.section-p1 {
+  padding: 25px;
+}
+
+.section-p2 {
+  padding: 5rem 5.5rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+body {
+  height: 100vh;
+  font-size: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  section {
+    width: 100%;
+    height: 100%;
+  }
+  .bacground-div {
+    width: 70em;
+    height: 37.6em;
+    top: 3em;
+    left: -8em;
+    background-image: url(./images/Cloud-background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: 2;
+    opacity: 0.05;
+    position: absolute;
+  }
+  .search-place {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.25s all;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--cohly-fat7);
+    z-index: 10;
+    display: flex;
+    gap: 1.92em;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8em 4.8em;
+    &.show {
+      transform: translateX(0);
+    }
+    & > svg {
+      position: absolute;
+      width: 3.2em;
+      height: 3.2em;
+      top: 2%;
+      right: 8%;
+      fill: var(--gray-fat7-awi);
+      cursor: pointer;
+    }
+    form {
+      height: 4em;
+      width: 100%;
+      display: flex;
+      gap: 1.6em;
+      button {
+        width: 25%;
+        background: #3c47e9;
+        border: none;
+        font-weight: 600;
+        font-size: 1.6em;
+        /* now the new font reference is 16px */
+        line-height: 1.17375em;
+        color: var(--gray-fat7-awi);
+        cursor: pointer;
+      }
+      div {
+        font-weight: 500;
+        line-height: 1.878em;
+        text-align: left;
+        padding: 0.4em 1.2em;
+        border: 0.1em solid #ffffff00;
+        transition: 0.25s all;
+        outline: none;
+        flex-grow: 1;
+        background-color: var(--cohly-fat7);
+        display: flex;
+        align-items: center;
+        gap: 0.8em;
+        svg {
+          width: 2.4em;
+          height: 2.4em;
+          fill: #616475;
+        }
+        &:hover {
+          border: 0.1em solid var(--gray-fat7-awi);
+        }
+        input {
+          flex-grow: 1;
+          color: #616475;
+          height: 100%;
+          background-color: inherit;
+          font-size: 1.6em;
+          /* now the new font reference is 16px */
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    .places {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8em;
+      width: 100%;
+      .place {
+        height: 4em;
+        border: 0.0625em solid #6164755a;
+        font-size: 1.6em;
+        /* now the new font reference is 16px */
+        font-weight: 500;
+        line-height: 1.17375em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.625em;
+        transition: 0.25s all;
+        color: var(--gray-fat7-awi);
+        cursor: pointer;
+        & > span {
+          display: flex;
+          width: 0.411875em;
+          height: 0.698125em;
+          fill: #61647500;
+          transition: 0.25s;
+        }
+        &:hover {
+          border: 0.0625em solid #616475;
+          & > span {
+            fill: #616475;
+          }
+        }
+      }
+    }
+  }
+  section:nth-of-type(2) {
+    width: 70%;
+    z-index: 4;
+    background-color: var(--cohly-ghameq);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4em;
+    .card {
+      display: flex;
+      padding: 2em 4em;
+      background-color: var(--cohly-fat7);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6em;
+      color: var(--gray-fat7-awi);
+      span {
+        font-size: 1.3em;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.7em;
+        .small {
+          color: var(--gray-fat7);
+          font-size: 1.6em;
+        }
+        .great {
+          font-size: 1.6em;
+        }
+      }
+      img {
+        width: 5.644em;
+        height: 6.2em;
+        object-fit: contain;
+      }
+    }
+    .weather-5days {
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5em;
+      position: relative;
+
+      .changeunit {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        top: -45px;
+        right: 0;
+        width: 50%;
+        display: flex;
+        height: 25%;
+
+        div {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--gray-fat7-awi);
+          cursor: pointer;
+          &:nth-of-type(2) {
+            background-color: #585676;
+            span {
+              color: var(--gray-fat7-awi);
+            }
+          }
+          span {
+            font-family: Raleway;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.13px;
+            text-align: center;
+            width: 16.19px;
+            height: 20px;
+            color: var(--cohly-ghameq-awi);
+          }
+        }
+      }
+    }
+    .todaydetails {
+      display: flex;
+      flex-direction: column;
+      gap: 1.92em;
+      h1 {
+        font-size: 2.4em;
+        /* now the new font reference is 24px */
+        font-weight: 700;
+        line-height: 1.174167em;
+        text-align: left;
+        color: #e7e7eb;
+      }
+      .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 55% 40%;
+        gap: 3.2em;
+        .card {
+          gap: 1.5em;
+          padding: 2.5em 3em;
+          & > span {
+            font-size: 1.6em;
+          }
+          .percent {
+            position: relative;
+            margin-top: 1.28em;
+            height: 0.8em;
+            border-radius: 8em;
+            background-color: var(--gray-fat7-awi);
+            display: flex;
+            justify-content: flex-start;
+            .bar {
+              height: 100%;
+              border-radius: inherit;
+              background-color: var(--yellow-bar);
+              width: var(--width-bar);
+            }
+          }
+          h1 {
+            font-size: 6.4em;
+            /*now the new font size refrence is the 64px*/
+            font-weight: 700;
+            line-height: 1.1740625;
+            span {
+              font-size: 0.5em;
+              font-weight: 500;
+              line-height: 0.6603215em;
+            }
+          }
+          div {
+            justify-content: center;
+            align-items: center;
+            gap: 1.12em;
+
+            span:nth-of-type(2) {
+              font-size: 1.4em;
+              /*now the new font size refrence is the 14px*/
+              font-weight: 500;
+              line-height: 1.17428571429em;
+            }
+            span {
+              color: var(--gray-fat7-awi);
+            }
+            span:nth-of-type(1) {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 2.5em;
+              height: 2.5em;
+              background-color: var(--gray-fat7);
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  section:nth-of-type(1) {
+    width: 500px;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 1.6em;
+    background-color: var(--cohly-fat7);
+    .search {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 3;
+      button:has(svg) {
+        font-size: 10px;
+        width: 4em;
+        height: 4em;
+        cursor: pointer;
+        background-color: var(--gray);
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0.4em 0.4em 0 rgb(0, 0, 0, 0.25);
+        svg {
+          width: 2.2em;
+          height: 2.2em;
+          fill: var(--gray-fat7-awi);
+        }
+      }
+      .btn-search {
+        box-shadow: 0 0.4em 0.4em 0 rgb(0, 0, 0, 0.25);
+        padding: 0.5em 1.5em;
+        background-color: var(--gray);
+        color: var(--gray-fat7-awi);
+        cursor: pointer;
+        border: none;
+      }
+    }
+    .weather-today {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2.4em;
+      .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 4.8em;
+        /* now the new font refrence is 48px */
+        font-weight: 400;
+        line-height: 1.173958333;
+        color: var(--gray-fat7);
+        span:nth-of-type(1) {
+          color: var(--gray-fat7-awi);
+          font-size: 2.375em;
+          /* now the new font refernce is 114px */
+          font-weight: 500;
+          line-height: 1.482em;
+        }
+      }
+      p {
+        color: var(--gray-fat7);
+        &:has(span) {
+          color: var(--gray-ghameq);
+          font-size: 1.8em;
+          /* now the new font refernce is 18px */
+          font-weight: 500;
+          line-height: 1.17388em;
+          justify-content: center;
+          width: 100%;
+          display: flex;
+          gap: 0.9777em;
+        }
+        &:has(svg) {
+          display: flex;
+          align-items: center;
+          gap: 0.45em;
+          font-size: 1.9em;
+          /* now the new font refernce is 18px */
+          font-weight: 600;
+          line-height: 1.166em;
+          svg {
+            width: 0.78em;
+            height: 1.083em;
+            fill: var(--gray-ghameq);
+          }
+        }
+
+        &:nth-of-type(1) {
+          font-size: 3.6em;
+          /* now the new font refernce is 36px */
+          font-weight: 600;
+          line-height: 1.175em;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1340px) {
+  body {
+    font-size: 8.5px;
+  }
+
+  .section-p2 {
+    padding: 4rem 2.5rem;
+  }
+  main section:nth-of-type(2) {
+    .weather-5days .changeunit {
+      display: none;
+    }
+    .todaydetails {
+      gap: 5em;
+      h1 {
+        font-size: 5em;
+        line-height: 1em;
+      }
+    }
+  }
+  .section-p1 {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 1150px) {
+  body {
+    font-size: 8px;
+  }
+  main .search-place form button {
+    font-size: 1.4em;
+  }
+  main section:nth-of-type(2) {
+    .todaydetails {
+      gap: 5em;
+
+      h1 {
+        font-size: 5em;
+        line-height: 1em;
+      }
+    }
+  }
+  .section-p2 {
+    padding: 3rem 2rem;
+  }
+  .section-p1 {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    font-size: 7.5px;
+    overflow-y: scroll;
+  }
+  main {
+    flex-direction: column;
+
+    .search-place {
+      padding: 4em 10em;
+      justify-content: center;
+      gap: 7em;
+      form {
+        height: 6em;
+        div {
+          padding: 1em 2em;
+        }
+        button {
+          font-size: 2em;
+          width: 5em;
+        }
+      }
+      .places {
+        gap: 2em;
+        font-size: 1.2em;
+      }
+    }
+    section:nth-of-type(2) {
+      .todaydetails .details .card .percent span {
+        font-size: 10px;
+      }
+
+      .weather-5days {
+        .card span {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .bacground-div {
+      width: 70%;
+      height: 60%;
+      top: 8em;
+      left: 20em;
+      background-image: url(./images/Cloud-background.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 2;
+      opacity: 0.05;
+      position: absolute;
+    }
+  }
+  main section:nth-of-type(n) {
+    width: 100%;
+  }
+}
+@media (max-width: 730px) {
+  .section-p2 {
+    padding: 3em 1em;
+  }
+  main .bacground-div {
+    width: 90%;
+    height: 50%;
+    top: 10%;
+    left: 10px;
+  }
+  main section:nth-of-type(2) .weather-5days {
+    font-size: 7px;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.6em;
+    display: grid;
+    .card {
+      font-size: 9.5px;
+      height: 100%;
+    }
+  }
+  main section:nth-of-type(2) {
+    height: 200vh;
+    .todaydetails {
+      gap: 4em;
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        font-size: 7px;
+        gap: 0.5em;
+      }
+    }
+  }
+  main .search-place {
+    padding: 2em 3em;
+  }
+
+  form button {
+    padding: 0.5em 1em;
+  }
+}
+@media (max-width: 350px) {
+  body {
+    font-size: 6px;
+  }
+  .section-p2 {
+    padding: 4em 3em;
+  }
+  main section:nth-of-type(2) .weather-5days {
+    gap: 1em;
+    /* align-content: center; */
+    .card {
+      font-size: 8px;
+      height: 100%;
+      div {
+        justify-content: center;
+        gap: 3em;
+      }
+    }
+  }
+}
+
+.loader {
+  --path: rgb(255, 255, 255);
+  --dot: rgb(255, 255, 255);
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  transform: translate(-18px, -18px);
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+.loader svg text {
+  color: white;
+}
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader.triangle {
+  width: 48px;
+}
+
+.loader.triangle:before {
+  left: 21px;
+  transform: translate(-10px, -18px);
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loaders {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cohly-fat7);
+  z-index: 12;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+
+  66% {
+    stroke-dashoffset: 147;
+  }
+
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+
+  66% {
+    transform: translate(10px, -18px);
+  }
+
+  100% {
+    transform: translate(-10px, -18px);
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -18px);
+  }
+
+  75% {
+    transform: translate(0, -36px);
+  }
+
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+
+  50% {
+    stroke-dashoffset: 175;
+  }
+
+  75% {
+    stroke-dashoffset: 225;
+  }
+
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+.loader {
+  display: inline-block;
+  margin: 0 16px;
+}

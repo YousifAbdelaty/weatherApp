@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="loaders">
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+          <text
+            x="50%"
+            y="60%"
+            text-anchor="middle"
+            fill="white"
+            font-size="24"
+            font-weight="bold"
+          >
+            I
+          </text>
+        </svg>
+      </div>
+
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+          <text
+            x="50%"
+            y="60%"
+            text-anchor="middle"
+            fill="white"
+            font-size="24"
+            font-weight="bold"
+          >
+            E
+          </text>
+        </svg>
+      </div>
+
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+          <text
+            x="50%"
+            y="60%"
+            text-anchor="middle"
+            fill="white"
+            font-size="24"
+            font-weight="bold"
+          >
+            E
+          </text>
+        </svg>
+      </div>
+
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+          <text
+            x="50%"
+            y="60%"
+            text-anchor="middle"
+            fill="white"
+            font-size="24"
+            font-weight="bold"
+          >
+            E
+          </text>
+        </svg>
+      </div>
+    </div>
+    <main>
+      <div class="bacground-div"></div>
+      <section class="section-p1">
+        <div class="search-place">
+          <svg
+            class="close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            />
+          </svg>
+          <form action="#">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"
+                ></path>
+              </svg>
+              <input type="text" placeholder="Search Location" />
+            </div>
+            <button type="submit" id="search-btn">search</button>
+          </form>
+          <div class="places"></div>
+        </div>
+        <div class="search">
+          <button class="btn-search">Seach for places</button>
+          <button id="getYourLocation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 0c17.7 0 32 14.3 32 32V66.7C368.4 80.1 431.9 143.6 445.3 224H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H445.3C431.9 368.4 368.4 431.9 288 445.3V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.3C143.6 431.9 80.1 368.4 66.7 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H66.7C80.1 143.6 143.6 80.1 224 66.7V32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="weather-today">
+          <div class="image"></div>
+          <h1 id="currentTemp"></h1>
+          <p id="condition"></p>
+          <p><span>Today</span>-<span id="dateToday"></span></p>
+          <p id="cityPlace"></p>
+        </div>
+      </section>
+      <section class="section-p2">
+        <div class="weather-5days">
+          <div class="changeunit">
+            <div class="celsius"><span> C </span></div>
+            <div class="fahrenheit"><span> F </span></div>
+          </div>
+          <div class="card day">
+            <span></span>
+
+            <img src="./images/HeavyRain.png" alt="" />
+
+            <div></div>
+          </div>
+          <div class="card day">
+            <span></span>
+
+            <img src="./images/HeavyRain.png" alt="" />
+
+            <div></div>
+          </div>
+          <div class="card day">
+            <span></span>
+
+            <img src="./images/LightRain.png" alt="" />
+
+            <div></div>
+          </div>
+          <div class="card day">
+            <span></span>
+
+            <img src="./images/Clear.png" alt="" />
+
+            <div></div>
+          </div>
+          <div class="card day">
+            <span></span>
+
+            <img src="./images/LightCloud.png" alt="" />
+
+            <div></div>
+          </div>
+        </div>
+        <div class="todaydetails">
+          <h1>Today’s Hightlights</h1>
+          <div class="details">
+            <div class="card" id="wind">
+              <span>Wind status</span>
+              <h1></h1>
+              <div>
+                <span
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="w-[17px] h-[17px]"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"
+                    ></path></svg
+                ></span>
+                <span class="small">wsw</span>
+              </div>
+            </div>
+            <div class="card" id="humidity">
+              <span>Humidity</span>
+
+              <h1></h1>
+              <div class="percent">
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="card" id="visibility">
+              <span>Visibility</span>
+              <h1></h1>
+            </div>
+            <div class="card" id="pressure">
+              <span>Air Pressure</span>
+              <h1></h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
